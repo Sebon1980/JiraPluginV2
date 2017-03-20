@@ -1,0 +1,947 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css);
+#legend.animated,
+body,
+html {
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s
+}
+
+#legend,
+body,
+html {
+    background-repeat: repeat
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.clear {
+    clear: both;
+    float: none
+}
+
+.clear:after,
+.clearfix:after,
+.last:after {
+    content: " ";
+    float: none;
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+*,
+:after,
+:before {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit
+}
+
+.content-width {
+    position: relative;
+    margin-left: 1em;
+    margin-right: 1em
+}
+
+.content-width:after,
+.list-item-content:after,
+.list-item:last-child:after {
+    content: '';
+    display: block;
+    clear: both
+}
+
+@media (max-width:1080px) and (orientation:portrait) {
+    body {
+        font-size: 24px
+    }
+}
+
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
+    body {
+        font-size: 20px
+    }
+}
+
+@media only screen and (min-width:1920px) and (orientation:landscape) {
+    body {
+        font-size: 1.25vw
+    }
+}
+
+@media only screen and (max-width:768px) and (orientation:portrait) {
+    body {
+        font-size: 2vw
+    }
+}
+
+#current-date,
+.item-description,
+.item-remaining-days,
+.page-subtitle {
+    color: #333
+}
+
+#legend .item-date-end span:before,
+#legend .item-date-start span:before,
+#legend .item-id span:before,
+#legend .item-progress span:before,
+#legend .item-status span:before,
+.item-status--released span:before,
+.item-status--unreleased span:before {
+    display: inline-block;
+    padding-right: .45em;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+#legend .item-date-start span:before {
+    content: '\f005'
+}
+
+#legend .item-date-end span:before {
+    content: '\f11e'
+}
+
+#legend .item-id span:before {
+    content: '\f292'
+}
+
+#legend .item-status span:before {
+    content: '\f14e'
+}
+
+#legend .item-progress span:before {
+    content: '\f0e4'
+}
+
+.item-status--released span:before {
+    content: '\f00c'
+}
+
+.item-status--unreleased span:before {
+    content: '\f00d'
+}
+
+body,
+html {
+    -webkit-animation-name: bgColorFadeIn;
+    -moz-animation-name: bgColorFadeIn;
+    -o-animation-name: bgColorFadeIn;
+    animation-name: bgColorFadeIn;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1
+}
+
+@-webkit-keyframes bgColorFadeIn {
+    0% {
+        background-color: #FFF
+    }
+    100% {
+        background-color: #bdc3c7
+    }
+}
+
+@-moz-keyframes bgColorFadeIn {
+    0% {
+        background-color: #FFF
+    }
+    100% {
+        background-color: #bdc3c7
+    }
+}
+
+@-o-keyframes bgColorFadeIn {
+    0% {
+        background-color: #FFF
+    }
+    100% {
+        background-color: #bdc3c7
+    }
+}
+
+@keyframes bgColorFadeIn {
+    0% {
+        background-color: #FFF
+    }
+    100% {
+        background-color: #bdc3c7
+    }
+}
+
+#header.animated {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s
+}
+
+.page-subtitle.animated,
+.page-title.animated {
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
+    animation-delay: 1.5s
+}
+
+#legend.animated {
+    animation-duration: 2s;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    animation-delay: 2s
+}
+
+#legend.animated .item-single {
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -o-animation-delay: 3s;
+    animation-delay: 3s
+}
+
+.list-item-content.animated {
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: .5s;
+    -moz-animation-delay: .5s;
+    -o-animation-delay: .5s;
+    animation-delay: .5s
+}
+
+.status.animated {
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
+    animation-delay: 1.5s
+}
+
+.progressbar.animated {
+    -webkit-animation-delay: .5s;
+    -moz-animation-delay: .5s;
+    -o-animation-delay: .5s;
+    animation-delay: .5s
+}
+
+.progressbar_loader {
+    -webkit-animation-name: progressbar_loader;
+    -moz-animation-name: progressbar_loader;
+    -o-animation-name: progressbar_loader;
+    animation-name: progressbar_loader;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+    -o-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-direction: normal;
+    -moz-animation-direction: normal;
+    -o-animation-direction: normal;
+    animation-direction: normal;
+    -webkit-transform-origin: 0 50%;
+    -moz-transform-origin: 0 50%;
+    -ms-transform-origin: 0 50%;
+    -o-transform-origin: 0 50%;
+    transform-origin: 0 50%
+}
+
+@-webkit-keyframes progressbar_loader {
+    0% {
+        left: -100%
+    }
+    100% {
+        left: 0
+    }
+}
+
+@-moz-keyframes progressbar_loader {
+    0% {
+        left: -100%
+    }
+    100% {
+        left: 0
+    }
+}
+
+@-o-keyframes progressbar_loader {
+    0% {
+        left: -100%
+    }
+    100% {
+        left: 0
+    }
+}
+
+@keyframes progressbar_loader {
+    0% {
+        left: -100%
+    }
+    100% {
+        left: 0
+    }
+}
+
+.loading-overlay {
+    display: table;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    vertical-align: middle;
+    text-align: center
+}
+
+.loading-fading-circle {
+    margin: 0 auto;
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%)
+}
+
+#header,
+#logo,
+ol li:after {
+    top: 0;
+    left: 0
+}
+
+.loading-fading-circle .loading-circle {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.loading-fading-circle .loading-circle:before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 15%;
+    height: 15%;
+    background-color: #205081;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    -webkit-animation: loading-circleFadeDelay 1.2s infinite ease-in-out both;
+    -moz-animation: loading-circleFadeDelay 1.2s infinite ease-in-out both;
+    -o-animation: loading-circleFadeDelay 1.2s infinite ease-in-out both;
+    animation: loading-circleFadeDelay 1.2s infinite ease-in-out both
+}
+
+#header,
+body,
+html {
+    width: 100%;
+    overflow: hidden
+}
+
+.loading-fading-circle .loading-circle2 {
+    -webkit-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg)
+}
+
+.loading-fading-circle .loading-circle3 {
+    -webkit-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+    transform: rotate(60deg)
+}
+
+.loading-fading-circle .loading-circle4 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+.loading-fading-circle .loading-circle5 {
+    -webkit-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    transform: rotate(120deg)
+}
+
+.loading-fading-circle .loading-circle6 {
+    -webkit-transform: rotate(150deg);
+    -ms-transform: rotate(150deg);
+    -moz-transform: rotate(150deg);
+    -o-transform: rotate(150deg);
+    transform: rotate(150deg)
+}
+
+.loading-fading-circle .loading-circle7 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.loading-fading-circle .loading-circle8 {
+    -webkit-transform: rotate(210deg);
+    -ms-transform: rotate(210deg);
+    -moz-transform: rotate(210deg);
+    -o-transform: rotate(210deg);
+    transform: rotate(210deg)
+}
+
+.loading-fading-circle .loading-circle9 {
+    -webkit-transform: rotate(240deg);
+    -ms-transform: rotate(240deg);
+    -moz-transform: rotate(240deg);
+    -o-transform: rotate(240deg);
+    transform: rotate(240deg)
+}
+
+.loading-fading-circle .loading-circle10 {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg)
+}
+
+.loading-fading-circle .loading-circle11 {
+    -webkit-transform: rotate(300deg);
+    -ms-transform: rotate(300deg);
+    -moz-transform: rotate(300deg);
+    -o-transform: rotate(300deg);
+    transform: rotate(300deg)
+}
+
+.loading-fading-circle .loading-circle12 {
+    -webkit-transform: rotate(330deg);
+    -ms-transform: rotate(330deg);
+    -moz-transform: rotate(330deg);
+    -o-transform: rotate(330deg);
+    transform: rotate(330deg)
+}
+
+.loading-fading-circle .loading-circle2:before {
+    -webkit-animation-delay: -1.1s;
+    -moz-animation-delay: -1.1s;
+    -o-animation-delay: -1.1s;
+    animation-delay: -1.1s
+}
+
+.loading-fading-circle .loading-circle3:before {
+    -webkit-animation-delay: -1s;
+    -moz-animation-delay: -1s;
+    -o-animation-delay: -1s;
+    animation-delay: -1s
+}
+
+.loading-fading-circle .loading-circle4:before {
+    -webkit-animation-delay: -.9s;
+    -moz-animation-delay: -.9s;
+    -o-animation-delay: -.9s;
+    animation-delay: -.9s
+}
+
+.loading-fading-circle .loading-circle5:before {
+    -webkit-animation-delay: -.8s;
+    -moz-animation-delay: -.8s;
+    -o-animation-delay: -.8s;
+    animation-delay: -.8s
+}
+
+.loading-fading-circle .loading-circle6:before {
+    -webkit-animation-delay: -.7s;
+    -moz-animation-delay: -.7s;
+    -o-animation-delay: -.7s;
+    animation-delay: -.7s
+}
+
+.loading-fading-circle .loading-circle7:before {
+    -webkit-animation-delay: -.6s;
+    -moz-animation-delay: -.6s;
+    -o-animation-delay: -.6s;
+    animation-delay: -.6s
+}
+
+.loading-fading-circle .loading-circle8:before {
+    -webkit-animation-delay: -.5s;
+    -moz-animation-delay: -.5s;
+    -o-animation-delay: -.5s;
+    animation-delay: -.5s
+}
+
+.loading-fading-circle .loading-circle9:before {
+    -webkit-animation-delay: -.4s;
+    -moz-animation-delay: -.4s;
+    -o-animation-delay: -.4s;
+    animation-delay: -.4s
+}
+
+.loading-fading-circle .loading-circle10:before {
+    -webkit-animation-delay: -.3s;
+    -moz-animation-delay: -.3s;
+    -o-animation-delay: -.3s;
+    animation-delay: -.3s
+}
+
+.loading-fading-circle .loading-circle11:before {
+    -webkit-animation-delay: -.2s;
+    -moz-animation-delay: -.2s;
+    -o-animation-delay: -.2s;
+    animation-delay: -.2s
+}
+
+.loading-fading-circle .loading-circle12:before {
+    -webkit-animation-delay: -.1s;
+    -moz-animation-delay: -.1s;
+    -o-animation-delay: -.1s;
+    animation-delay: -.1s
+}
+
+@-webkit-keyframes loading-circleFadeDelay {
+    0%,
+    100%,
+    39% {
+        opacity: 0
+    }
+    40% {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes loading-circleFadeDelay {
+    0%,
+    100%,
+    39% {
+        opacity: 0
+    }
+    40% {
+        opacity: 1
+    }
+}
+
+@-o-keyframes loading-circleFadeDelay {
+    0%,
+    100%,
+    39% {
+        opacity: 0
+    }
+    40% {
+        opacity: 1
+    }
+}
+
+@keyframes loading-circleFadeDelay {
+    0%,
+    100%,
+    39% {
+        opacity: 0
+    }
+    40% {
+        opacity: 1
+    }
+}
+
+body,
+html {
+    font-family: 'Roboto Condensed', sans-serif;
+    height: 100%;
+    background-color: #bdc3c7;
+    background-image: url(../images/noisy-texture-100x100-o27-d47-c-ffffff-t1.png);
+    color: #205081
+}
+
+body {
+    font-size: 24px;
+    font-size: 1.5625vw
+}
+
+#header,
+.box_shadow,
+.list-item {
+    -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, .15);
+    -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, .15);
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, .15)
+}
+
+#header {
+    position: fixed;
+    background-color: #fafafb;
+    padding: .75em 0 0;
+    z-index: 500
+}
+
+#logo {
+    position: absolute;
+    width: auto;
+    height: 3em;
+    padding-right: 1em
+}
+
+#logo img,
+#logo svg {
+    width: auto;
+    height: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: block
+}
+
+#logo svg .st0 {
+    fill: #205081
+}
+
+.header-content {
+    text-align: center;
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    margin: 0 1.5em;
+    padding: 0 8em
+}
+
+.page-subtitle,
+.page-title {
+    display: block;
+    width: 100%
+}
+
+.page-title {
+    font-size: 1.4em;
+    font-weight: 700
+}
+
+.page-subtitle {
+    font-size: 1em
+}
+
+#current-date {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right
+}
+
+#legend {
+    background-color: #205081;
+    background-image: url(../images/noisy-texture-100x100-o10-d47-c-000000-t1.png);
+    display: block;
+    margin: .75em 0 0;
+    padding: .5em 1em
+}
+
+#legend .item-single {
+    font-weight: 300;
+    color: #fafafb
+}
+
+.item-name,
+ol li:before {
+    font-weight: 700
+}
+
+.content {
+    padding-top: 7.85em
+}
+
+.list-item {
+    display: block;
+    background-color: #fafafb;
+    margin: 0 0 6px;
+    padding: 1.5em 1em;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px
+}
+
+.list-item-content {
+    display: table;
+    width: 100%;
+    position: relative
+}
+
+.item-single {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: .5em;
+    padding-right: .5em
+}
+
+ol {
+    list-style: none
+}
+
+ol li {
+    counter-increment: item;
+    position: relative
+}
+
+ol li:before {
+    content: counter(item);
+    position: absolute;
+    top: .5em;
+    left: .5em;
+    z-index: 500;
+    text-align: left;
+    display: inline-block;
+    font-size: .75em;
+    line-height: 1em;
+    color: #FFF
+}
+
+ol li:after {
+    content: ' ';
+    position: absolute;
+    z-index: 499;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 2.25em 2.25em 0 0;
+    border-color: #59afe1 transparent transparent
+}
+
+.item-id {
+    width: 30%
+}
+
+.item-progress {
+    width: 25%
+}
+
+.item-date-end,
+.item-date-start,
+.item-status {
+    width: 15%
+}
+
+.item-description,
+.item-name,
+.item-remaining-days {
+    display: block
+}
+
+.item-date-end,
+.item-date-start {
+    text-align: right
+}
+
+.item-status span.status {
+    display: inline-block;
+    padding: .35em .45em;
+    color: #FFF;
+    -webkit-border-radius: .15em;
+    -moz-border-radius: .15em;
+    border-radius: .15em
+}
+
+.item-status--released span.status {
+    background-color: #14892c
+}
+
+.item-status--unreleased span.status {
+    background-color: #d04437
+}
+
+.progressbar {
+    position: relative;
+    width: 100%;
+    overflow: hidden
+}
+
+.progressbar,
+.progressbar .done,
+.progressbar .in-progress,
+.progressbar:before {
+    height: .8em;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em
+}
+
+.progressbar .in-progress {
+    height: -webkit-calc(.8em - 8px);
+    height: -moz-calc(.8em - 8px);
+    height: calc(.8em - 8px);
+    top: 4px
+}
+
+.progressbar .to-do {
+    height: 4px;
+    top: -webkit-calc(50% - 2px);
+    top: -moz-calc(50% - 2px);
+    top: calc(50% - 2px);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: #bdc3c7;
+    z-index: 10;
+    width: 100%
+}
+
+.progressbar .done,
+.progressbar .in-progress,
+.progressbar .to-do {
+    position: absolute
+}
+
+.progressbar .done {
+    background-color: #14892c;
+    z-index: 30;
+    width: 20%
+}
+
+.progressbar .in-progress {
+    background-color: #f79232;
+    z-index: 20;
+    width: 40%
+}
