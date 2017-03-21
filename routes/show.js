@@ -10,6 +10,20 @@ router.get('/', function(req, res, next) {
     res.send('respond with a resource');
 });
 
+router.get('/allIssues/:boardId', function(req, res, next) {
+    testJira.selectIssuesBy(req.params.boardId, req.query)
+        .then(result => {
+            if (result.length === 0) {
+                console.log('Select parameter doesn´t exist')
+                return res.send('Select parameter doesn´t exist')
+            }
+            res.send(result);
+        })
+        .catch(e => console.log(e));
+})
+
+
+
 router.get('/versions/:boardId', function(req, res, next) {
 
     testJira.getVersions(req.params.boardId)
@@ -22,7 +36,7 @@ router.get('/versions/:boardId', function(req, res, next) {
 });
 
 router.get('/versions/details/:versionId', function(req, res, next) {
-    testJira.getDetailsOfVersion(req.params)
+    testJira.getDetailsOfVersion(req.params.versionId)
         .then(version => {
             console.log(version);
             res.send(version)
